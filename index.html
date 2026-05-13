@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音乐播放器 - 覃天怡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player-wrapper">
+    <!-- 顶部信息 -->
+    <div class="player-header">
+      <span class="student-info">学号：24215220118 &nbsp;|&nbsp; 姓名：覃天怡</span>
+    </div>
+
+    <!-- 背景图区域 -->
+    <div class="bg-disc">
+      <img src="img/record0.jpg" id="recordImg" class="record-img" alt="唱片封面">
+    </div>
+
+    <!-- 歌曲信息 -->
+    <div class="song-info">
+      <h2 id="songName">欢迎使用音乐播放器</h2>
+      <p id="artist">点击播放开始体验</p>
+    </div>
+
+    <!-- 进度条 -->
+    <div class="progress-section">
+      <span id="currentTime">0:00</span>
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-current" id="progressCurrent"></div>
+        <div class="progress-dot" id="progressDot"></div>
+      </div>
+      <span id="totalTime">0:00</span>
+    </div>
+
+    <!-- 控制按钮 -->
+    <div class="controls">
+      <button class="btn-control" id="prevBtn" title="上一曲">
+        <img src="img/上一首.png" alt="上一曲">
+      </button>
+      <button class="btn-control btn-play" id="playBtn" title="播放/暂停">
+        <img src="img/继续播放.png" id="playImg" alt="播放">
+      </button>
+      <button class="btn-control" id="nextBtn" title="下一曲">
+        <img src="img/下一首.png" alt="下一曲">
+      </button>
+    </div>
+
+    <!-- 播放模式 & 音量 -->
+    <div class="extra-controls">
+      <button class="btn-small" id="modeBtn" title="播放模式">
+        <img src="img/mode1.png" id="modeImg" alt="模式">
+      </button>
+      <div class="volume-control">
+        <img src="img/音量.png" id="volIcon" alt="音量">
+        <input type="range" id="volumeSlider" min="0" max="100" value="70">
+      </div>
+    </div>
+
+    <!-- 播放列表 -->
+    <div class="playlist-toggle" id="playlistToggle">
+      <img src="img/列表.png" alt="播放列表">
+      <span>播放列表</span>
+    </div>
+
+    <div class="playlist" id="playlist">
+      <ul id="playlistSongs">
+        <!-- 歌曲列表由JS生成 -->
+      </ul>
+    </div>
+
+    <!-- 隐藏音频 -->
+    <audio id="audio" src="mp3/music0.mp3"></audio>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

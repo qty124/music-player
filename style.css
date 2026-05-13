@@ -5,8 +5,10 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background: url('img/bg0.png') no-repeat center center fixed;
   background-size: cover;
   display: flex;
@@ -19,7 +21,8 @@ body {
 .player-wrapper {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(180deg, #2a2a4a 0%, #1e1e3f 100%);
+  background: rgba(20, 20, 40, 0.75);
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: center;
